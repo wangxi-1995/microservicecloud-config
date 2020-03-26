@@ -1,11 +1,4 @@
-﻿spring:
-  profiles:
-    active:
-    - test
----
-spring:
-  profiles: dev
-server: 
+﻿server: 
   port: 7001
  
 eureka: 
@@ -14,19 +7,5 @@ eureka:
   client: 
     register-with-eureka: false    
     fetch-registry: false     
-    service-url: 
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
----
-spring:
-  profiles: test
-server: 
-  port: 7003
- 
-eureka: 
-  instance:
-    hostname: eureka7001.com 
-  client: 
-    register-with-eureka: false     
-    fetch-registry: false    
     service-url: 
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
